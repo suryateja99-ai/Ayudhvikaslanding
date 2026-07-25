@@ -50,7 +50,7 @@ export const WhyUs: React.FC = () => {
     },
     {
       feature: "Certifications",
-      azs4s: "PSARA Licensed & ISO 9001:2015 Certified Agency",
+      azs4s: "Statutory Compliant Agency",
       traditional: "Unregistered or local temporary vendors",
       highlight: false
     },
@@ -84,7 +84,7 @@ export const WhyUs: React.FC = () => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg">
-            We bridge physical security &amp; professional deep cleaning with digital supervision, legal compliance, and rapid emergency response.
+            We bridge security &amp; professional deep cleaning with digital supervision, legal compliance, and rapid emergency response.
           </p>
         </div>
 

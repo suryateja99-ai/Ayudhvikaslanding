@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { 
-  ShieldCheck, Video, Building2, Users, Crown, Sparkles, 
+  ShieldCheck, Building2, Users, Crown, Sparkles,
   ArrowRight, Check, Clock, Shield, Filter, Eye
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -21,20 +21,27 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({
 
   const categories = [
     { id: 'all', label: 'All Solutions' },
+    { id: 'deep-cleaning', label: 'Deep Cleaning' },
     { id: 'security', label: 'Security & Guarding' },
-    { id: 'surveillance', label: 'Tech & CCTV' },
     { id: 'facility', label: 'Facility Management' },
     { id: 'manpower', label: 'Corporate Manpower' },
   ];
 
-  const filteredServices = activeCategory === 'all'
+  const filteredServices = (activeCategory === 'all'
     ? SERVICES_DATA
-    : SERVICES_DATA.filter(s => s.category === activeCategory || (activeCategory === 'facility' && s.category === 'specialized'));
+    : SERVICES_DATA.filter(s => s.category === activeCategory || (activeCategory === 'facility' && s.category === 'specialized'))
+  ).slice().sort((a, b) => {
+    if (activeCategory !== 'all') return 0;
+    if (a.category === 'deep-cleaning' && b.category !== 'deep-cleaning') return -1;
+    if (a.category !== 'deep-cleaning' && b.category === 'deep-cleaning') return 1;
+    if (a.category === 'security' && b.category !== 'security') return -1;
+    if (a.category !== 'security' && b.category === 'security') return 1;
+    return 0;
+  });
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'ShieldCheck': return <ShieldCheck className="w-6 h-6 text-blue-900" />;
-      case 'Video': return <Video className="w-6 h-6 text-red-600" />;
       case 'Building2': return <Building2 className="w-6 h-6 text-blue-800" />;
       case 'Users': return <Users className="w-6 h-6 text-red-600" />;
       case 'Crown': return <Crown className="w-6 h-6 text-amber-500" />;
@@ -65,7 +72,7 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg">
-            Deploy trained security officers, electronic CCTV surveillance, janitorial teams, and administrative support with guaranteed SLAs.
+            Our expanded AyudhKlin deep-cleaning solutions cover homes, offices, commercial spaces, industrial sites, and post-construction handovers alongside reliable security and facility support.
           </p>
         </div>
 
@@ -86,6 +93,17 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({
           ))}
         </div>
 
+        {activeCategory === 'all' && (
+          <div className="mb-8 rounded-3xl border border-emerald-300 bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-5 sm:px-8 sm:py-6 text-white shadow-xl shadow-emerald-900/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <p className="text-xs font-bold tracking-widest text-emerald-100 uppercase">Featured first</p>
+              <h3 className="mt-1 text-2xl sm:text-3xl font-extrabold">AyudhKlin Professional Deep Cleaning</h3>
+              <p className="mt-1 text-sm text-emerald-50">Detailed cleaning for homes, offices, commercial spaces, industrial sites, and post-construction handovers.</p>
+            </div>
+            <button onClick={() => setActiveCategory('deep-cleaning')} className="shrink-0 rounded-xl bg-white px-5 py-3 text-sm font-bold text-emerald-700 hover:bg-emerald-50 transition-colors">View deep cleaning</button>
+          </div>
+        )}
+
         {/* Bento Grid Layout */}
         <motion.div 
           layout
@@ -100,12 +118,12 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className={`group relative rounded-3xl bg-white border border-slate-200/90 hover:border-blue-500 p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5 ${
+                className={`group relative rounded-3xl bg-white border ${service.category === 'deep-cleaning' ? 'border-emerald-300 hover:border-emerald-500 shadow-lg shadow-emerald-900/10' : 'border-slate-200/90 hover:border-blue-500'} p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5 ${
                   service.bentoSpan || 'col-span-1'
                 }`}
               >
                 {/* Background Card Gradient Accent */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-50/40 via-transparent to-red-50/20 opacity-80 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.category === 'deep-cleaning' ? 'from-emerald-50 via-transparent to-teal-50' : 'from-blue-50/40 via-transparent to-red-50/20'} opacity-80 group-hover:opacity-100 transition-opacity pointer-events-none`} />
 
                 <div className="relative z-10">
                   {/* Service Card Image Banner */}
@@ -212,7 +230,7 @@ export const ServicesBento: React.FC<ServicesBentoProps> = ({
               </h3>
 
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                Licensed under Reg. No. 417/2025, Telangana. We deliver comprehensive physical security guarding, housekeeping, deep cleaning, civil cleaning, and pre-vetted corporate manpower with guaranteed 24/7 helpline desk assistance.
+                Licensed under Reg. No. 417/2025, Telangana. We deliver comprehensive security guarding, housekeeping, deep cleaning, civil cleaning, and pre-vetted corporate manpower with guaranteed 24/7 helpline desk assistance.
               </p>
 
               <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-xs text-slate-300 space-y-2">

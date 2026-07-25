@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  ShieldCheck, Video, Building2, ArrowRight, Award, UserCheck, 
+  ShieldCheck, Building2, ArrowRight, Award, UserCheck,
   BadgeCheck, Smartphone, Siren, HelpCircle, MapPin, Phone, Sparkles, Zap
 } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -30,7 +30,7 @@ export const HomePreviews: React.FC<HomePreviewsProps> = ({ onSelectTab, onOpenQ
             Integrated Security & Facility Solutions
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Professional manned guarding, executive protection bodyguards, electronic surveillance, and commercial property upkeep.
+            Professional manned guarding, executive protection bodyguards, deep cleaning, and commercial property upkeep.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export const HomePreviews: React.FC<HomePreviewsProps> = ({ onSelectTab, onOpenQ
             <div className="lg:col-span-7 relative h-64 sm:h-80 lg:h-96 overflow-hidden">
               <img 
                 src={bodyguardImg} 
-                alt="Ayudh Vikas Professional Bodyguards and Physical Security Officers" 
+                alt="Ayudh Vikas Professional Bodyguards and Security Officers"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-95"
               />
@@ -55,7 +55,7 @@ export const HomePreviews: React.FC<HomePreviewsProps> = ({ onSelectTab, onOpenQ
               </div>
               
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-snug">
-                Disciplined Bodyguards & Armed/Unarmed Physical Security Detail
+                Disciplined Bodyguards & Armed/Unarmed Security Detail
               </h3>
               
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
@@ -89,7 +89,7 @@ export const HomePreviews: React.FC<HomePreviewsProps> = ({ onSelectTab, onOpenQ
               <div className="p-3 rounded-xl bg-blue-50 border border-blue-200 w-fit text-blue-900">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900">Physical Guarding & Security</h3>
+              <h3 className="text-lg font-bold text-slate-900">Guarding & Security</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Biometric-tracked, police-verified security officers, industrial gatekeepers, and executive protection.
               </p>
@@ -107,21 +107,21 @@ export const HomePreviews: React.FC<HomePreviewsProps> = ({ onSelectTab, onOpenQ
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:border-red-500 hover:shadow-md transition-all">
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:border-emerald-500 hover:shadow-md transition-all">
             <div className="space-y-4">
-              <div className="p-3 rounded-xl bg-red-50 border border-red-200 w-fit text-red-700">
-                <Video className="w-6 h-6" />
+              <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 w-fit text-emerald-700">
+                <Sparkles className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900">AI Tech Surveillance & CCTV</h3>
+              <h3 className="text-lg font-bold text-slate-900">AyudhKlin Deep Cleaning</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Smart IP camera feeds, perimeter intrusion motion alerts, and automated biometric entry barriers.
+                Detailed home, office, commercial, and industrial deep cleaning with trained teams and professional supplies.
               </p>
             </div>
             <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-              <span className="text-[11px] font-semibold text-red-700">Central Command Feed</span>
+              <span className="text-[11px] font-semibold text-emerald-700">Same Day / Next Day</span>
               <button
-                onClick={() => onSelectTab('services')}
-                className="text-xs font-bold text-red-700 hover:text-red-800 flex items-center gap-1 cursor-pointer"
+                onClick={() => onSelectTab('ayudhklin-services')}
+                className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1 cursor-pointer"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -196,7 +196,7 @@ export const HomePreviews: React.FC<HomePreviewsProps> = ({ onSelectTab, onOpenQ
 
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
               <BadgeCheck className="w-5 h-5 text-red-600 mb-2" />
-              <h4 className="text-xs font-bold text-slate-900">PSARA & ISO Certified</h4>
+              <h4 className="text-xs font-bold text-slate-900">Statutory Compliant</h4>
               <p className="text-[11px] text-slate-600 mt-1">Full statutory EPF, ESIC, and minimum wage proof.</p>
             </div>
 

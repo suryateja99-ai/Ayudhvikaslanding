@@ -1,7 +1,6 @@
 import { ServiceItem, Testimonial, ProcessStep, FAQItem } from '../types';
 
 import serviceSecurityGuardImg from '../assets/images/service_security_guard_1784719456979.jpg';
-import serviceCctvSurveillanceImg from '../assets/images/service_cctv_surveillance_1784719468230.jpg';
 import serviceFacilityManagementImg from '../assets/images/service_facility_management_1784719479580.jpg';
 import serviceCorporateStaffingImg from '../assets/images/service_corporate_staffing_1784719493174.jpg';
 import serviceVipEventSecurityImg from '../assets/images/service_vip_event_security_1784719506450.jpg';
@@ -10,7 +9,7 @@ import serviceDeepCleaningImg from '../assets/images/service_deep_cleaning_17847
 export const COMPANY_INFO = {
   name: "Ayudh Vikas",
   fullName: "Ayudh Vikas Manpower Solutions",
-  tagline: "Physical Security & Professional Deep Cleaning Solutions",
+  tagline: "Security & Professional Deep Cleaning Solutions",
   phone: "+91 9000045073",
   phoneDisplay: "9000045073",
   email: "support@ayudhvikas.com",
@@ -18,21 +17,21 @@ export const COMPANY_INFO = {
   address: "Km Complex, Hunter Road, Warangal Railway Gate, Opposite Kasam Janata Sale, Warangal - 506002, Telangana, India",
   shortAddress: "Km Complex, Hunter Road, Warangal Railway Gate, Warangal - 506002",
   landmark: "Opposite Kasam Janata Sale",
-  coreOfferings: "Physical Security & Professional Deep Cleaning",
+  coreOfferings: "Security & Professional Deep Cleaning",
   experienceYears: "10+",
   activeGuards: "3,500+",
   clientsServed: "500+",
-  rating: "4.8 / 5",
-  reviewCount: "350+",
+  rating: "5 / 5",
+  reviewCount: "23",
   responseWindow: "24-48 Hours Deployment",
 };
 
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: 'security-guarding',
-    title: 'Physical Security & Guarding',
+    title: 'Security & Guarding',
     shortDesc: 'Vetted, police-verified security personnel and executive protection for corporate & industrial assets.',
-    fullDesc: 'Complete manned guarding solutions tailored to your operational needs. Our security officers undergo background checks, physical fitness tests, biometric verification, and rigorous training in fire safety, emergency response, and access management.',
+    fullDesc: 'Complete manned guarding solutions tailored to your operational needs. Our security officers undergo background checks, fitness tests, biometric verification, and rigorous training in fire safety, emergency response, and access management.',
     category: 'security',
     iconName: 'ShieldCheck',
     badge: 'Popular',
@@ -47,36 +46,11 @@ export const SERVICES_DATA: ServiceItem[] = [
     specs: {
       deploymentTime: '24 - 48 Hours',
       supervision: '24/7 Mobile Patrolling Team',
-      compliance: 'PSARA Certified, PF & ESI Compliant',
-      trainedIn: ['Access Management', 'CCTV Protocol', 'First Aid & Fire Drills', 'Conflict De-escalation']
+      compliance: 'PF & ESI Compliant',
+      trainedIn: ['Access Management', 'First Aid & Fire Drills', 'Conflict De-escalation']
     },
     bentoSpan: 'col-span-1 md:col-span-2 lg:col-span-2',
     bgGradient: 'from-blue-900/40 via-slate-900 to-slate-950'
-  },
-  {
-    id: 'tech-surveillance',
-    title: 'AI Tech Surveillance & CCTV',
-    shortDesc: 'Smart IP camera monitoring, biometric access control, and motion alert integrations.',
-    fullDesc: 'Transform your physical facility with smart, automated electronic security. We install, calibrate, and monitor high-definition CCTV systems, smart perimeter alarms, automatic gate barriers, and facial recognition access control.',
-    category: 'surveillance',
-    iconName: 'Video',
-    badge: 'Smart Tech',
-    image: serviceCctvSurveillanceImg,
-    features: [
-      '24/7 Remote Central Monitoring Feed',
-      'AI Motion & Perimeter Intrusion Alerts',
-      'Biometric & RFID Smart Door Locks',
-      'Automatic Number Plate Recognition (ANPR)',
-      'Cloud Backup & Incident Footage Retrieval'
-    ],
-    specs: {
-      deploymentTime: '1 - 3 Business Days',
-      supervision: 'Central Command Center Feed',
-      compliance: 'ISO/IEC 27001 Data Privacy Compliant',
-      trainedIn: ['IP Camera Calibration', 'AI Alert Triage', 'Footage Archiving', 'Perimeter Alarm Protocol']
-    },
-    bentoSpan: 'col-span-1 md:col-span-1 lg:col-span-1',
-    bgGradient: 'from-cyan-950/50 via-slate-900 to-slate-950'
   },
   {
     id: 'facility-management',
@@ -97,7 +71,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     specs: {
       deploymentTime: '48 Hours',
       supervision: 'On-site Facility Operations Manager',
-      compliance: 'ISO 9001:2015 Quality Standard',
+      compliance: 'Quality Standard',
       trainedIn: ['Industrial Scrubbers', 'High-Rise Facade Safety', 'Chemical Handling', 'Preventive Upkeep']
     },
     bentoSpan: 'col-span-1 md:col-span-1 lg:col-span-1',
@@ -158,7 +132,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     title: 'Deep Cleaning & Sanitization',
     shortDesc: 'Medical-grade disinfection, carpet shampooing, facade glass restoration, and industrial deep cleaning.',
     fullDesc: 'Deep sanitation services using heavy-duty industrial single-disc scrubbing machines, UV-C equipment, high-pressure washers, and non-toxic bio-degradable chemicals for commercial kitchens, IT complexes, and residential towers.',
-    category: 'facility',
+    category: 'deep-cleaning',
     iconName: 'Sparkles',
     badge: 'Pro Grade',
     image: serviceDeepCleaningImg,
@@ -175,8 +149,46 @@ export const SERVICES_DATA: ServiceItem[] = [
       compliance: 'Eco-Certified Green Cleaning Standards',
       trainedIn: ['Taski Machine Operation', 'Facade Harness Protocols', 'Hospital Disinfection']
     },
-    bentoSpan: 'col-span-1 md:col-span-2 lg:col-span-1',
+    bentoSpan: 'col-span-1 md:col-span-2 lg:col-span-2',
     bgGradient: 'from-blue-950/40 via-slate-900 to-slate-950'
+  },
+  {
+    id: 'residential-deep-cleaning',
+    title: 'Residential Deep Cleaning',
+    shortDesc: 'Room-by-room deep cleaning for homes, apartments, kitchens, bathrooms, upholstery, and move-in or move-out handovers.',
+    fullDesc: 'Our AyudhKlin cleaning team follows a detailed checklist to treat grease, scale, dust, stains, and high-touch areas. We bring the equipment and cleaning supplies needed to restore a fresh, hygienic home.',
+    category: 'deep-cleaning',
+    iconName: 'Sparkles',
+    badge: 'AyudhKlin Care',
+    image: serviceDeepCleaningImg,
+    features: ['Kitchen degreasing and appliance exterior cleaning', 'Bathroom descaling, tile scrubbing, and sanitization', 'Sofa, mattress, carpet, and upholstery care', 'Move-in, move-out, and festive cleaning packages'],
+    specs: {
+      deploymentTime: 'Same Day / Next Day',
+      supervision: 'Cleaning Team Lead',
+      compliance: 'Hygiene-focused cleaning process',
+      trainedIn: ['Surface Care', 'Chemical Handling', 'Detail Cleaning']
+    },
+    bentoSpan: 'col-span-1 md:col-span-1 lg:col-span-1',
+    bgGradient: 'from-emerald-950/40 via-slate-900 to-slate-950'
+  },
+  {
+    id: 'commercial-deep-cleaning',
+    title: 'Commercial & Industrial Deep Cleaning',
+    shortDesc: 'Scheduled deep cleaning for offices, retail spaces, warehouses, kitchens, factories, and post-construction sites.',
+    fullDesc: 'We plan cleaning around your operating hours and site conditions, using professional machines for floors, high-touch areas, glass, washrooms, and demanding industrial surfaces.',
+    category: 'deep-cleaning',
+    iconName: 'Sparkles',
+    badge: 'Commercial Care',
+    image: serviceDeepCleaningImg,
+    features: ['Floor scrubbing, polishing, and stain treatment', 'Post-construction dust and debris cleanup', 'Workstation, pantry, washroom, and common-area cleaning', 'Flexible recurring service schedules'],
+    specs: {
+      deploymentTime: 'Site assessment required',
+      supervision: 'Master Cleaning Supervisor',
+      compliance: 'Site-specific safety process',
+      trainedIn: ['Machine Operation', 'Industrial Surface Care', 'Safety Procedures']
+    },
+    bentoSpan: 'col-span-1 md:col-span-1 lg:col-span-1',
+    bgGradient: 'from-emerald-950/40 via-slate-900 to-slate-950'
   }
 ];
 
@@ -230,8 +242,8 @@ export const WHY_AZS4S_ITEMS = [
     color: "from-blue-500 to-cyan-500"
   },
   {
-    title: "ISO 9001:2015 & PSARA Certified",
-    desc: "Fully compliant with Indian security regulations (PSARA), EPF, ESIC, Minimum Wages Act, and international quality standards.",
+    title: "Statutory Compliance",
+    desc: "Fully compliant with EPF, ESIC, Minimum Wages Act, and applicable quality standards.",
     icon: "BadgeCheck",
     color: "from-emerald-500 to-teal-500"
   },
@@ -281,7 +293,7 @@ export const TESTIMONIALS: Testimonial[] = [
     industry: 'Manufacturing & Industrial',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
     rating: 5,
-    quote: 'Managing industrial perimeter security and heavy material gate logs was complex until Ayudh Vikas brought in AI camera surveillance combined with manned security officers. Outstanding compliance and service!',
+    quote: 'Managing industrial perimeter security and heavy material gate logs was complex until Ayudh Vikas brought in a disciplined guarding team. Outstanding compliance and service!',
     metrics: '100% gate log accuracy'
   },
   {
@@ -322,7 +334,7 @@ export const CLIENT_LOGOS = [
 export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "How quickly can Ayudh Vikas deploy security personnel or deep cleaning staff to our site?",
-    answer: "We offer emergency deployment within 24 to 48 hours for physical security personnel and professional deep cleaning staff across Telangana and South India. For large-scale industrial or custom setups, deployment typically takes 3 to 5 business days following site audit.",
+    answer: "We offer emergency deployment within 24 to 48 hours for security personnel and professional deep cleaning staff across Telangana and South India. For large-scale industrial or custom setups, deployment typically takes 3 to 5 business days following site audit.",
     category: "Deployment"
   },
   {
@@ -332,12 +344,12 @@ export const FAQ_ITEMS: FAQItem[] = [
   },
   {
     question: "What statutory compliance standards does Ayudh Vikas follow?",
-    answer: "Ayudh Vikas strictly complies with PSARA regulations, EPF (Provident Fund), ESIC (Health Insurance), Minimum Wages Act, Bonus Act, and Labour License guidelines. We provide monthly statutory remittance proofs alongside client billing.",
+    answer: "Ayudh Vikas strictly complies with EPF (Provident Fund), ESIC (Health Insurance), Minimum Wages Act, Bonus Act, and Labour License guidelines. We provide monthly statutory remittance proofs alongside client billing.",
     category: "Compliance"
   },
   {
-    question: "Can we request a combined quote for Physical Security & Professional Deep Cleaning?",
-    answer: "Absolutely! Physical Security & Professional Deep Cleaning are our primary core offerings. We specialize in integrated manpower packages bundling physical guarding, deep cleaning & sanitization, and facility maintenance into a single cost-effective SLA contract with a dedicated Account Manager.",
+    question: "Can we request a combined quote for Security & Professional Deep Cleaning?",
+    answer: "Absolutely! Security & Professional Deep Cleaning are our primary core offerings. We specialize in integrated manpower packages bundling guarding, deep cleaning & sanitization, and facility maintenance into a single cost-effective SLA contract with a dedicated Account Manager.",
     category: "Pricing"
   },
   {

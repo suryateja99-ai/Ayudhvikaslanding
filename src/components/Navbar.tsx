@@ -28,7 +28,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
   const navLinks = [
     { id: 'home', name: 'Home' },
     { id: 'services', name: 'Services' },
-    { id: 'ayudhklin', name: 'AyudhKlin Products' },
+    { id: 'ayudhklin-products', name: 'AyudhKlin' },
     { id: 'why-us', name: 'Why Ayudh Vikas' },
     { id: 'faq', name: 'FAQ' },
     { id: 'contact', name: 'Contact' },
@@ -45,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
               24/7 Emergency Operations
             </span>
             <span className="hidden sm:inline text-slate-200 text-[11px] font-medium">
-              Physical Security & Professional Deep Cleaning Solutions across Telangana & South India
+              Security & Professional Deep Cleaning Solutions across Telangana & South India
             </span>
           </div>
 
@@ -86,13 +86,28 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex items-center gap-1 bg-slate-100/90 p-1.5 rounded-full border border-blue-200/80 shadow-inner">
             {navLinks.map((link) => {
-              const isActive = activeTab === link.id;
+              const isAyudhKlin = link.id === 'ayudhklin-products';
+              const isActive = isAyudhKlin ? activeTab.startsWith('ayudhklin-') : activeTab === link.id;
               
               // Special style for AyudhKlin tab (Green) vs general tabs (Navy/Red)
               let activeBg = 'bg-gradient-to-r from-blue-900 to-blue-950 text-white shadow-md shadow-blue-950/20';
-              if (link.id === 'ayudhklin' && isActive) {
+              if (isAyudhKlin && isActive) {
                 activeBg = 'bg-emerald-600 text-white shadow-md shadow-emerald-600/30';
               }
+
+              if (isAyudhKlin) return (
+                <div key={link.id} className="relative group">
+                  <button className={`px-4 py-1.5 text-xs font-bold rounded-full transition-all duration-200 cursor-pointer ${isActive ? activeBg : 'text-slate-800 hover:text-emerald-700 hover:bg-white'}`}>
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block mr-1.5" />AyudhKlin
+                  </button>
+                  <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all absolute left-0 top-full pt-2 z-50 w-52">
+                    <div className="rounded-xl border border-emerald-200 bg-white p-1.5 shadow-xl">
+                      <button onClick={() => onSelectTab('ayudhklin-products')} className={`w-full rounded-lg px-3 py-2 text-left text-xs font-bold ${activeTab === 'ayudhklin-products' ? 'bg-emerald-600 text-white' : 'text-slate-700 hover:bg-emerald-50'}`}>AyudhKlin Products</button>
+                      <button onClick={() => onSelectTab('ayudhklin-services')} className={`w-full rounded-lg px-3 py-2 text-left text-xs font-bold ${activeTab === 'ayudhklin-services' ? 'bg-emerald-600 text-white' : 'text-slate-700 hover:bg-emerald-50'}`}>AyudhKlin Services</button>
+                    </div>
+                  </div>
+                </div>
+              );
 
               return (
                 <button
@@ -104,9 +119,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
                       : 'text-slate-800 hover:text-blue-900 hover:bg-white'
                   }`}
                 >
-                  {link.id === 'ayudhklin' && (
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block mr-1.5" />
-                  )}
                   {link.name}
                 </button>
               );
@@ -152,11 +164,20 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
           <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-blue-200 px-4 pt-3 pb-6 mt-3 space-y-3 animate-in slide-in-from-top duration-200">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => {
-                const isActive = activeTab === link.id;
+                const isAyudhKlin = link.id === 'ayudhklin-products';
+                const isActive = isAyudhKlin ? activeTab.startsWith('ayudhklin-') : activeTab === link.id;
                 let activeMobileStyle = 'bg-blue-900 text-white shadow-sm';
-                if (link.id === 'ayudhklin' && isActive) {
+                if (isAyudhKlin && isActive) {
                   activeMobileStyle = 'bg-emerald-600 text-white shadow-sm';
                 }
+
+                if (isAyudhKlin) return (
+                  <div key={link.id} className="rounded-lg border border-emerald-200 bg-emerald-50 p-2">
+                    <div className="px-2 pb-1 text-sm font-bold text-emerald-800">AyudhKlin</div>
+                    <button onClick={() => { setMobileMenuOpen(false); onSelectTab('ayudhklin-products'); }} className={`w-full px-3 py-2 text-left text-sm font-bold rounded-lg ${activeTab === 'ayudhklin-products' ? 'bg-emerald-600 text-white' : 'text-slate-700'}`}>AyudhKlin Products</button>
+                    <button onClick={() => { setMobileMenuOpen(false); onSelectTab('ayudhklin-services'); }} className={`w-full px-3 py-2 text-left text-sm font-bold rounded-lg ${activeTab === 'ayudhklin-services' ? 'bg-emerald-600 text-white' : 'text-slate-700'}`}>AyudhKlin Services</button>
+                  </div>
+                );
 
                 return (
                   <button

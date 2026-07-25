@@ -170,7 +170,7 @@ export const ProcessTimeline: React.FC<ProcessTimelineProps> = ({ onOpenQuoteMod
 
                     <div className="flex items-center justify-between text-xs text-slate-300">
                       <span>Statutory Approvals</span>
-                      <span className="font-bold text-blue-400">100% PSARA Verified</span>
+                      <span className="font-bold text-blue-400">100% Verified</span>
                     </div>
 
                     <div className="flex items-center justify-between text-xs text-slate-300">

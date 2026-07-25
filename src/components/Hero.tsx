@@ -5,6 +5,7 @@ import {
 import { motion } from 'motion/react';
 import { COMPANY_INFO } from '../data/mockData';
 import securityHeroBg from '../assets/images/security_hero_bg_1784715806151.jpg';
+import ayudhKlinHeroLogo from '../assets/images/ayudhklin-hero-logo.png';
 
 interface HeroProps {
   onOpenQuoteModal: () => void;
@@ -41,7 +42,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onSelectTab }) => 
         className="absolute inset-0 bg-[linear-gradient(to_right,#10b98115_1px,transparent_1px),linear-gradient(to_bottom,#10b98115_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none z-10" 
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full text-center flex flex-col items-center space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="text-left flex flex-col items-start space-y-8">
         
         {/* Top Security Badge */}
         <motion.div
@@ -81,7 +83,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onSelectTab }) => 
           className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-blue-950/90 border border-red-500/40 shadow-md text-xs sm:text-sm font-extrabold text-slate-200 backdrop-blur-md"
         >
           <span className="text-red-400">Core Services:</span>
-          <span className="text-white font-black">Manned Physical Security</span>
+          <span className="text-white font-black">Manned Security</span>
           <span className="text-slate-400">&amp;</span>
           <span className="text-blue-300 font-black">Professional Deep Cleaning</span>
         </motion.div>
@@ -93,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onSelectTab }) => 
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal"
         >
-          Delivering police-verified physical security guards, industrial &amp; residential deep cleaning, electronic CCTV surveillance, and facility manpower across <strong className="text-white font-semibold">Hanamkonda, Warangal, and Kazipet</strong>.
+          Delivering police-verified security guards, industrial &amp; residential deep cleaning, and facility manpower across <strong className="text-white font-semibold">Hanamkonda, Warangal, and Kazipet</strong>.
         </motion.p>
 
         {/* Dual CTAs - Red & Blue combo */}
@@ -101,7 +103,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onSelectTab }) => 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto pt-2"
+          className="flex flex-col sm:flex-row items-center justify-start gap-4 w-full sm:w-auto pt-2"
         >
           <button
             onClick={onOpenQuoteModal}
@@ -126,9 +128,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onSelectTab }) => 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="pt-8 border-t border-slate-800/80 w-full max-w-3xl grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-medium text-slate-300"
+          className="pt-8 border-t border-slate-800/80 w-full grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-medium text-slate-300"
         >
-          <div className="flex items-center justify-center gap-2 bg-slate-900/80 backdrop-blur-md p-3.5 rounded-2xl border border-slate-800 shadow-sm">
+          <div className="flex items-center justify-start gap-2 bg-slate-900/80 backdrop-blur-md p-3.5 rounded-2xl border border-slate-800 shadow-sm">
             <div className="flex text-amber-400">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
@@ -140,7 +142,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onSelectTab }) => 
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 bg-slate-900/80 backdrop-blur-md p-3.5 rounded-2xl border border-slate-800 shadow-sm">
+          <div className="flex items-center justify-start gap-2 bg-slate-900/80 backdrop-blur-md p-3.5 rounded-2xl border border-slate-800 shadow-sm">
             <div className="p-1.5 rounded-lg bg-red-950 text-red-400 border border-red-800/50">
               <Activity className="w-4 h-4" />
             </div>
@@ -150,7 +152,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onSelectTab }) => 
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 bg-slate-900/80 backdrop-blur-md p-3.5 rounded-2xl border border-slate-800 shadow-sm">
+          <div className="flex items-center justify-start gap-2 bg-slate-900/80 backdrop-blur-md p-3.5 rounded-2xl border border-slate-800 shadow-sm">
             <div className="p-1.5 rounded-lg bg-blue-950 text-blue-400 border border-blue-800/50">
               <ShieldCheck className="w-4 h-4" />
             </div>
@@ -160,7 +162,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onSelectTab }) => 
             </div>
           </div>
         </motion.div>
+        </div>
 
+        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="flex flex-col items-center justify-center text-center">
+          <img src={ayudhKlinHeroLogo} alt="AyudhKlin - Clean. Care. Protect." className="h-72 sm:h-80 lg:h-[26rem] w-auto max-w-full object-contain drop-shadow-2xl" />
+          <p className="mt-5 max-w-sm text-lg sm:text-xl font-bold text-emerald-200">AyudhKlin Professional Deep Cleaning</p>
+          <p className="mt-2 max-w-sm text-sm leading-relaxed text-slate-300">Careful, detailed cleaning for homes, workplaces, commercial spaces, and industrial sites.</p>
+          <button onClick={() => onSelectTab?.('ayudhklin-services')} className="mt-5 text-sm font-bold text-emerald-300 hover:text-emerald-100 transition-colors">Explore deep-cleaning services →</button>
+        </motion.div>
       </div>
     </section>
   );

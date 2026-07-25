@@ -3,7 +3,7 @@ export interface ServiceItem {
   title: string;
   shortDesc: string;
   fullDesc: string;
-  category: 'security' | 'facility' | 'manpower' | 'surveillance' | 'specialized';
+  category: 'security' | 'facility' | 'manpower' | 'deep-cleaning' | 'specialized';
   iconName: string;
   badge?: string;
   image?: string;

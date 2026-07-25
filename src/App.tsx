@@ -7,6 +7,7 @@ import { HomePreviews } from './components/HomePreviews';
 import { PageHeader } from './components/PageHeader';
 import { ServicesBento } from './components/ServicesBento';
 import { S4SmartProducts } from './components/S4SmartProducts';
+import { AyudhKlinServices } from './components/AyudhKlinServices';
 import { WhyUs } from './components/WhyUs';
 import { FAQSection } from './components/FAQSection';
 import { ContactSection } from './components/ContactSection';
@@ -19,7 +20,8 @@ import { ServiceItem } from './types';
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>(() => {
     const hash = window.location.hash.replace('#', '');
-    return ['home', 'services', 'ayudhklin', 'why-us', 'faq', 'contact'].includes(hash) ? hash : 'home';
+    if (hash === 'ayudhklin') return 'ayudhklin-products';
+    return ['home', 'services', 'ayudhklin-products', 'ayudhklin-services', 'why-us', 'faq', 'contact'].includes(hash) ? hash : 'home';
   });
 
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
@@ -30,9 +32,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (['home', 'services', 'ayudhklin', 'why-us', 'faq', 'contact'].includes(hash)) {
-        setActiveTab(hash);
-      }
+      setActiveTab(hash === 'ayudhklin' ? 'ayudhklin-products' : ['home', 'services', 'ayudhklin-products', 'ayudhklin-services', 'why-us', 'faq', 'contact'].includes(hash) ? hash : 'home');
     };
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
@@ -94,7 +94,7 @@ export default function App() {
             <PageHeader 
               badge="Services Portfolio"
               title="Integrated Solutions Portfolio"
-              subtitle="Explore our full suite of physical security officers, electronic CCTV surveillance, facility management, and pre-vetted corporate manpower."
+              subtitle="Explore our full suite of security officers, electronic CCTV surveillance, facility management, and pre-vetted corporate manpower."
               onSelectTab={handleSelectTab}
               onOpenQuoteModal={() => handleOpenQuoteModal()}
             />
@@ -105,11 +105,15 @@ export default function App() {
           </div>
         )}
 
-        {activeTab === 'ayudhklin' && (
+        {activeTab === 'ayudhklin-products' && (
           <S4SmartProducts
             onOpenQuoteModal={handleOpenQuoteModal}
             onSelectTab={handleSelectTab}
           />
+        )}
+
+        {activeTab === 'ayudhklin-services' && (
+          <AyudhKlinServices onOpenQuoteModal={handleOpenQuoteModal} />
         )}
 
         {activeTab === 'why-us' && (
@@ -117,7 +121,7 @@ export default function App() {
             <PageHeader 
               badge="The Ayudh Vikas Differentiators"
               title="Why Enterprise Leaders Trust Ayudh Vikas"
-              subtitle="PSARA licensed, ISO 9001:2015 certified, 100% statutory compliant security & facility operations across Telangana and South India."
+              subtitle="100% statutory compliant security and facility operations across Telangana and South India."
               onSelectTab={handleSelectTab}
               onOpenQuoteModal={() => handleOpenQuoteModal()}
             />

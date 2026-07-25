@@ -200,8 +200,7 @@ export const ContactSection: React.FC = () => {
                         onChange={(e) => setContactState({ ...contactState, serviceInterest: e.target.value })}
                         className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
                       >
-                        <option value="Security Guarding">Physical Security Guarding</option>
-                        <option value="Tech Surveillance">AI CCTV Surveillance</option>
+                        <option value="Security Guarding">Security Guarding</option>
                         <option value="Facility Management">Integrated Facility Management</option>
                         <option value="Corporate Staffing">Corporate Support Staff</option>
                         <option value="Deep Cleaning">Deep Cleaning & Sanitization</option>

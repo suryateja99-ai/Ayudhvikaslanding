@@ -26,7 +26,7 @@ export const QuoteEstimator: React.FC = () => {
 
   const serviceOptions = [
     { id: 'security', label: 'Security Guarding & Patrol', desc: 'Uniformed guards, supervisory visits, gate logs' },
-    { id: 'cctv', label: 'AI Tech & CCTV Surveillance', desc: 'Remote monitoring, access control, smart sensors' },
+    { id: 'deep-cleaning', label: 'AyudhKlin Deep Cleaning', desc: 'Detailed home, office, commercial & industrial cleaning' },
     { id: 'facility', label: 'Integrated Facility Management', desc: 'Commercial upkeep, janitorial & MEP maintenance' },
     { id: 'manpower', label: 'Corporate Manpower & Support', desc: 'Front office, pantry boys, warehouse staff' },
     { id: 'event', label: 'Event & VIP Escort Security', desc: 'Crowd management, DFMD scanners, VIP escorts' },
@@ -416,7 +416,7 @@ export const QuoteEstimator: React.FC = () => {
                       </label>
                       <textarea
                         rows={2}
-                        placeholder="e.g. Need 2 armed guards for entrance gate + CCTV installation..."
+                        placeholder="e.g. Need 2 guards for the entrance gate and a deep-cleaning team for the office..."
                         value={formData.additionalNotes}
                         onChange={(e) => setFormData({ ...formData, additionalNotes: e.target.value })}
                         className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-red-500 resize-none"

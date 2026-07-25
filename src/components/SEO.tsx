@@ -12,22 +12,22 @@ export const SEO: React.FC<SEOProps> = ({ activeTab }) => {
       case 'services':
         return {
           title: 'Security Guards & Facility Management Services | Hanamkonda, Warangal, Kazipet',
-          description: 'Explore PSARA licensed armed/unarmed security guards, corporate staffing, CCTV electronic monitoring, and facility management in Hanamkonda, Warangal, and Kazipet.',
-          keywords: 'security guard services warangal, corporate staffing hanamkonda, cctv security kazipet, facility management warangal, psara security guards telangana',
+          description: 'Explore security guards, corporate staffing, deep cleaning, and facility management in Hanamkonda, Warangal, and Kazipet.',
+          keywords: 'security guard services warangal, corporate staffing hanamkonda, deep cleaning warangal, facility management warangal',
           canonical: 'https://ayudhvikas.com/#services',
         };
-      case 'ayudhklin':
+      case 'ayudhklin-products':
         return {
           title: 'AYUDHKLIN - Deep Cleaning & Hygiene Solutions in Hanamkonda, Warangal, Kazipet',
           description: 'Professional deep cleaning services for homes, offices, hospitals, and commercial complexes in Hanamkonda, Warangal & Kazipet. Sanitization, carpet cleaning, & floor scrubbing.',
           keywords: 'deep cleaning warangal, house cleaning hanamkonda, office deep cleaning kazipet, sanitization services warangal, commercial deep cleaning telangana',
-          canonical: 'https://ayudhvikas.com/#ayudhklin',
+          canonical: 'https://ayudhvikas.com/#ayudhklin-products',
         };
       case 'why-us':
         return {
-          title: 'Why Choose Ayudh Vikas | PSARA Licensed & ISO 9001 Certified Security Agency',
+          title: 'Why Choose Ayudh Vikas | Security Agency',
           description: 'Why enterprise leaders trust Ayudh Vikas Manpower Solutions: 100% statutory compliant, 24/7 supervisor response, police verified manpower in Hanamkonda, Warangal, Kazipet.',
-          keywords: 'licensed security agency warangal, psara certified guards hanamkonda, top security agency kazipet, verified manpower solutions telangana',
+          keywords: 'licensed security agency warangal, top security agency kazipet, verified manpower solutions telangana',
           canonical: 'https://ayudhvikas.com/#why-us',
         };
       case 'faq':
@@ -48,8 +48,8 @@ export const SEO: React.FC<SEOProps> = ({ activeTab }) => {
       default:
         return {
           title: 'Ayudh Vikas Manpower Solutions | #1 Security Guards & Deep Cleaning in Hanamkonda, Warangal, Kazipet',
-          description: 'Ayudh Vikas Manpower Solutions provides PSARA licensed physical security guards, 24/7 CCTV surveillance, and AYUDHKLIN professional deep cleaning in Hanamkonda, Warangal, and Kazipet. Call +91 9000045073.',
-          keywords: 'security guards in warangal, deep cleaning hanamkonda, security agency kazipet, manpower agency warangal, ayudh vikas manpower solutions, house cleaning kazipet, psara security agency telangana',
+          description: 'Ayudh Vikas Manpower Solutions provides security guards, facility support, and AYUDHKLIN professional deep cleaning in Hanamkonda, Warangal, and Kazipet. Call +91 9000045073.',
+          keywords: 'security guards in warangal, deep cleaning hanamkonda, security agency kazipet, manpower agency warangal, ayudh vikas manpower solutions, house cleaning kazipet',
           canonical: 'https://ayudhvikas.com/',
         };
     }

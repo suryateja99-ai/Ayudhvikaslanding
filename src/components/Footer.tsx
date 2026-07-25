@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
             </a>
 
             <p className="text-slate-600 leading-relaxed text-xs">
-              Ayudh Vikas Manpower Solutions is an ISO 9001:2015 certified premier provider delivering police-verified physical security personnel, professional deep cleaning, electronic CCTV surveillance, and corporate manpower across <strong className="text-slate-900 font-semibold">Hanamkonda, Warangal, and Kazipet</strong>.
+              Ayudh Vikas Manpower Solutions is a premier provider delivering police-verified security personnel, professional deep cleaning, facility support, and corporate manpower across <strong className="text-slate-900 font-semibold">Hanamkonda, Warangal, and Kazipet</strong>.
             </p>
 
             <div className="pt-2 space-y-2">
@@ -53,7 +53,9 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
             <ul className="space-y-2 text-xs">
               <li><a href="#home" onClick={handleNav('home')} className="hover:text-emerald-600 transition-colors">Home Page</a></li>
               <li><a href="#services" onClick={handleNav('services')} className="hover:text-emerald-600 transition-colors">Services Portfolio</a></li>
-              <li><a href="#ayudhklin" onClick={handleNav('ayudhklin')} className="hover:text-emerald-600 transition-colors font-bold text-emerald-700">AyudhKlin Products</a></li>
+              <li className="font-bold text-emerald-700">AyudhKlin</li>
+              <li><a href="#ayudhklin-products" onClick={handleNav('ayudhklin-products')} className="hover:text-emerald-600 transition-colors pl-3">AyudhKlin Products</a></li>
+              <li><a href="#ayudhklin-services" onClick={handleNav('ayudhklin-services')} className="hover:text-emerald-600 transition-colors pl-3">AyudhKlin Services</a></li>
               <li><a href="#why-us" onClick={handleNav('why-us')} className="hover:text-emerald-600 transition-colors">Why Ayudh Vikas</a></li>
               <li><a href="#faq" onClick={handleNav('faq')} className="hover:text-emerald-600 transition-colors">Frequently Asked Questions</a></li>
               <li><a href="#contact" onClick={handleNav('contact')} className="hover:text-emerald-600 transition-colors">Contact Headquarters</a></li>
@@ -66,9 +68,9 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
               Core Offerings
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#services" onClick={handleNav('services')} className="hover:text-emerald-600 font-bold text-slate-900 transition-colors">🛡️ Physical Security &amp; Guarding</a></li>
+              <li><a href="#services" onClick={handleNav('services')} className="hover:text-emerald-600 font-bold text-slate-900 transition-colors">🛡️ Security &amp; Guarding</a></li>
               <li><a href="#services" onClick={handleNav('services')} className="hover:text-emerald-600 font-bold text-slate-900 transition-colors">✨ Professional Deep Cleaning</a></li>
-              <li><a href="#services" onClick={handleNav('services')} className="hover:text-emerald-600 transition-colors">CCTV &amp; AI Surveillance</a></li>
+              <li><a href="#ayudhklin-services" onClick={handleNav('ayudhklin-services')} className="hover:text-emerald-600 transition-colors">AyudhKlin Deep Cleaning</a></li>
               <li><a href="#services" onClick={handleNav('services')} className="hover:text-emerald-600 transition-colors">Integrated Facility Management</a></li>
               <li><a href="#services" onClick={handleNav('services')} className="hover:text-emerald-600 transition-colors">Corporate Support Staff</a></li>
               <li><a href="#services" onClick={handleNav('services')} className="hover:text-emerald-600 transition-colors">Event &amp; VIP Escort</a></li>
