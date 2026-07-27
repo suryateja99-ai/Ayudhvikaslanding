@@ -13,6 +13,7 @@ export const COMPANY_INFO = {
   phone: "+91 9000045073",
   phone2: "0870-4120820",
   phoneDisplay: "9000045073",
+  phoneDisplay2: "0870-4120820",
   email: "support@ayudhvikas.com",
   whatsappUrl: "https://wa.me/919000045073?text=Hi%20Ayudh%20Vikas%20Manpower%20Solutions,%20I%20am%20interested%20in%20a%20custom%20quote.",
   address: "Km Complex, Hunter Road, Warangal Railway Gate, Opposite Kasam Janata Sale, Warangal - 506002, Telangana, India",
