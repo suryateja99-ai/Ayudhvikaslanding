@@ -56,6 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
             >
               <Phone className="w-3.5 h-3.5 text-red-400" />
               <span>Call: {COMPANY_INFO.phoneDisplay}</span>
+              <span>Call: {COMPANY_INFO.phone2}</span>
             </a>
             <span className="text-slate-700">|</span>
             <span className="hidden md:flex items-center gap-1 text-slate-200 text-xs">
