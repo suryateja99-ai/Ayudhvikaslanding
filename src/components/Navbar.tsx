@@ -56,7 +56,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
             >
               <Phone className="w-3.5 h-3.5 text-red-400" />
               <span>Call: {COMPANY_INFO.phoneDisplay}</span>
-              <span>, {COMPANY_INFO.phone2}</span>
             </a>
             <a 
               href={`tel:${COMPANY_INFO.phone2}`} 
