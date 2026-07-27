@@ -77,11 +77,11 @@ export const WhyUs: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Why Top Enterprises Trust{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-800 to-red-600">
-              Ayudh Vikas
-            </span>
-          </h2>
+  Why Top Enterprises Trust{' '}
+  <span className="inline-block whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-800 to-red-600">
+    Ayudh Vikas
+  </span>
+</h2>
 
           <p className="text-slate-600 text-base sm:text-lg">
             We bridge security &amp; professional deep cleaning with digital supervision, legal compliance, and rapid emergency response.
