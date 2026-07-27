@@ -58,6 +58,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
               <span>Call: {COMPANY_INFO.phoneDisplay}</span>
               <span>, {COMPANY_INFO.phone2}</span>
             </a>
+            <a 
+              href={`tel:${COMPANY_INFO.phone2}`} 
+              className="hover:text-red-400 transition-colors flex items-center gap-1 font-bold text-xs"
+            >
+              <Phone className="w-3.5 h-3.5 text-red-400" />
+              <span>, {COMPANY_INFO.phoneDisplay2}</span>
+            </a>
             <span className="text-slate-700">|</span>
             <span className="hidden md:flex items-center gap-1 text-slate-200 text-xs">
               <Clock className="w-3 h-3 text-amber-400" />
