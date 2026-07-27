@@ -11,6 +11,7 @@ export const COMPANY_INFO = {
   fullName: "Ayudh Vikas Manpower Solutions",
   tagline: "Security & Professional Deep Cleaning Solutions",
   phone: "+91 9000045073",
+  phone2: "0870-4120820",
   phoneDisplay: "9000045073",
   email: "support@ayudhvikas.com",
   whatsappUrl: "https://wa.me/919000045073?text=Hi%20Ayudh%20Vikas%20Manpower%20Solutions,%20I%20am%20interested%20in%20a%20custom%20quote.",
