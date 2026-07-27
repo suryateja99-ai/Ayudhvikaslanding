@@ -100,6 +100,9 @@ export const ContactSection: React.FC = () => {
                   <strong className="text-sm text-slate-900 group-hover:text-red-600 transition-colors block mt-0.5">
                     {COMPANY_INFO.phoneDisplay}
                   </strong>
+                  <strong className="text-sm text-slate-900 group-hover:text-red-600 transition-colors block mt-0.5">
+                    ,{COMPANY_INFO.phoneDisplay2}
+                  </strong>
                   <span className="text-[10px] text-red-600 font-bold block mt-1">Available 24/7/365</span>
                 </div>
               </a>
