@@ -21,6 +21,7 @@ export const ContactSection: React.FC = () => {
 
 👤 *Name:* ${contactState.name}
 📞 *Phone:* ${contactState.phone}
+📞 *Landline:* ${contactState.phone2}
 ✉️ *Email:* ${contactState.email || 'N/A'}
 🛠️ *Service Interest:* ${contactState.serviceInterest}
 📝 *Facility Details / Message:* ${contactState.message || 'None provided'}`;
