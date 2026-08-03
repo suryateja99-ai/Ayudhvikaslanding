@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@keyframes page-turn-next {
+  from { opacity: 0; transform: perspective(1500px) rotateY(-70deg); }
+  to { opacity: 1; transform: perspective(1500px) rotateY(0deg); }
+}
+
+@keyframes page-turn-previous {
+  from { opacity: 0; transform: perspective(1500px) rotateY(70deg); }
+  to { opacity: 1; transform: perspective(1500px) rotateY(0deg); }
+}
+
+.flipbook-page {
+  backface-visibility: hidden;
+}
+
+.flipbook-page--next {
+  transform-origin: left center;
+  animation: page-turn-next 480ms ease-out;
+}
+
+.flipbook-page--previous {
+  transform-origin: right center;
+  animation: page-turn-previous 480ms ease-out;
+}

@@ -29,6 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab, onOpenQu
     { id: 'home', name: 'Home' },
     { id: 'services', name: 'Services' },
     { id: 'ayudhklin-products', name: 'AyudhKlin' },
+    { id: 'about-us', name: 'About Us' },
     { id: 'why-us', name: 'Why Ayudh Vikas' },
     { id: 'faq', name: 'FAQ' },
     { id: 'contact', name: 'Contact' },

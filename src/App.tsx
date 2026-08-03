@@ -15,13 +15,14 @@ import { Footer } from './components/Footer';
 import { QuoteModal } from './components/QuoteModal';
 import { ServiceModal } from './components/ServiceModal';
 import { FloatingActions } from './components/FloatingActions';
+import { AboutUs } from './components/AboutUs';
 import { ServiceItem } from './types';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>(() => {
     const hash = window.location.hash.replace('#', '');
     if (hash === 'ayudhklin') return 'ayudhklin-products';
-    return ['home', 'services', 'ayudhklin-products', 'ayudhklin-services', 'why-us', 'faq', 'contact'].includes(hash) ? hash : 'home';
+    return ['home', 'services', 'ayudhklin-products', 'ayudhklin-services', 'about-us', 'why-us', 'faq', 'contact'].includes(hash) ? hash : 'home';
   });
 
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      setActiveTab(hash === 'ayudhklin' ? 'ayudhklin-products' : ['home', 'services', 'ayudhklin-products', 'ayudhklin-services', 'why-us', 'faq', 'contact'].includes(hash) ? hash : 'home');
+      setActiveTab(hash === 'ayudhklin' ? 'ayudhklin-products' : ['home', 'services', 'ayudhklin-products', 'ayudhklin-services', 'about-us', 'why-us', 'faq', 'contact'].includes(hash) ? hash : 'home');
     };
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
@@ -115,6 +116,8 @@ export default function App() {
         {activeTab === 'ayudhklin-services' && (
           <AyudhKlinServices onOpenQuoteModal={handleOpenQuoteModal} />
         )}
+
+        {activeTab === 'about-us' && <AboutUs />}
 
         {activeTab === 'why-us' && (
           <div>
