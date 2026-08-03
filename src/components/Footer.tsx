@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
             <div className="pt-2 space-y-2">
               <div className="flex items-center gap-2 text-slate-700">
                 <Phone className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Helpline: <strong className="text-slate-900">{COMPANY_INFO.phoneDisplay}</strong></span>
+                <span>Helpline: <strong className="text-slate-900">{COMPANY_INFO.phoneDisplay}</strong>, <strong className="text-slate-900">{COMPANY_INFO.phoneDisplay2}</strong></span>
               </div>
               <div className="flex items-center gap-2 text-slate-700">
                 <Mail className="w-3.5 h-3.5 text-emerald-600" />

@@ -21,6 +21,7 @@ export const ContactSection: React.FC = () => {
 
 👤 *Name:* ${contactState.name}
 📞 *Phone:* ${contactState.phone}
+📞 *Landline:* ${contactState.phone2}
 ✉️ *Email:* ${contactState.email || 'N/A'}
 🛠️ *Service Interest:* ${contactState.serviceInterest}
 📝 *Facility Details / Message:* ${contactState.message || 'None provided'}`;
@@ -98,6 +99,9 @@ export const ContactSection: React.FC = () => {
                   <span className="text-[11px] font-bold text-slate-500 block uppercase">24/7 Helpline</span>
                   <strong className="text-sm text-slate-900 group-hover:text-red-600 transition-colors block mt-0.5">
                     {COMPANY_INFO.phoneDisplay}
+                  </strong>
+                  <strong className="text-sm text-slate-900 group-hover:text-red-600 transition-colors block mt-0.5">
+                    ,{COMPANY_INFO.phoneDisplay2}
                   </strong>
                   <span className="text-[10px] text-red-600 font-bold block mt-1">Available 24/7/365</span>
                 </div>
